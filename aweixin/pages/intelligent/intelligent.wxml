@@ -1,0 +1,26 @@
+<view class="container"> 
+  <ul>
+  
+    <li bindtap="goToDetail">
+      <view class="list-img">
+        <image class="imageIcon" src="{{avatarUrl}}"></image>
+        <view class="li-name">来自星星的你</view>
+      </view>
+      <view class="list-content">
+        <view class="li-content">
+          韩国首都开发计划署咖啡很苦的傻话费卡就是付款会尽快
+        </view>
+        <view class="li-address">
+        <mp-icon class="li-icon" icon="location" color="gray" size="{{16}}"></mp-icon>
+        <span>回复客户说了看见分厘卡时间了付款</span>
+        </view>
+        <view class="li-time">
+        <mp-icon class="li-icon" icon="time" color="gray" size="{{16}}"></mp-icon>
+        <span>2020-04-04 10:26:33</span>
+        </view>
+      </view>
+      <mp-icon class="li-icon" icon="arrow" color="gray" size="{{12}}"></mp-icon>
+    </li>
+  
+  </ul>
+</view>

@@ -1,0 +1,79 @@
+/* miniprogram/pages/intelligent/intelligent.wxss */
+ul {
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding:0 30rpx;
+}
+li{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 10rpx 0;
+}
+.li-name{
+  width:100rpx;
+  font-size: xx-small;
+  color: #b3afaf;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+
+.imageIcon{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+.imageIcon[size] {
+  width: 80rpx;
+}
+.imageIcon:after {
+  border: none;
+}
+
+.list-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+  padding:0 20rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.li-content{
+  font-size: smaller;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.li-address{
+  font-size: x-small;
+  color: #b3afaf;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.li-time{
+  font-size: x-small;
+  color: #b3afaf;
+  display: flex;
+  align-items:center;
+}
+
+.li-time span{
+  padding-top:6rpx;
+}
+
+.li-icon{
+  margin-right: 10rpx;
+  align-self: center;
+}
+
+

@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/repairList/repairList",
+    "pages/listDetail/listDetail",
+    "pages/intelligent/intelligent"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "公寓智能报修系统",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/intelligent/intelligent",
+        "iconPath": "images/list_off.png",      
+        "selectedIconPath": "images/list_on.png",
+        "text": "智能报修"
+      },
+      {
+        "pagePath": "pages/repairList/repairList",
+        "iconPath": "images/list_off.png",      
+        "selectedIconPath": "images/list_on.png",
+        "text": "报修列表"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/center_off.png",      
+        "selectedIconPath": "images/center_on.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "usingComponents": {
+    "mp-dialog": "/miniprogram_npm/weui-miniprogram/dialog/dialog",
+    "mp-toptips": "../miniprogram_npm/weui-miniprogram/toptips/toptips",
+    "mp-cells": "../miniprogram_npm/weui-miniprogram/cells/cells",
+    "mp-cell": "../miniprogram_npm/weui-miniprogram/cell/cell",
+    "mp-checkbox": "../miniprogram_npm/weui-miniprogram/checkbox/checkbox",
+    "mp-checkbox-group": "../miniprogram_npm/weui-miniprogram/checkbox-group/checkbox-group",
+    "mp-form": "../miniprogram_npm/weui-miniprogram/form/form",
+    "mp-icon": "../miniprogram_npm/weui-miniprogram/icon/icon"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

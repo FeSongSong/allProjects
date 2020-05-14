@@ -1,0 +1,33 @@
+/* miniprogram/pages/listDetail/listDetail.wxss */
+.container{
+ border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.repair{
+  width:100%;
+}
+
+.repair-title{
+  border-bottom: 1px solid rgba(182, 178, 178, 0.1);
+  padding: 20rpx;
+}
+
+.repair-content {
+  padding: 20rpx 20rpx 40rpx;
+}
+
+.repair-btm{
+  display: flex;
+  justify-content: space-around;
+  padding: 60rpx 0;
+}
+.repair-btm button{
+  width: 260rpx !important;
+  color: #fff;
+}
+.warn-turn{
+  background-color: #E33E33 ;
+}
+.weui-textarea{
+  text-align:left;
+}

@@ -1,0 +1,21 @@
+<view>
+  <view class="container">
+    <view class="repair">
+      <view class="repair-title">报修地点</view>
+      <view class="repair-content">12</view>
+    </view>
+    <view class="repair">
+      <view class="repair-title">报修项目</view>
+      <view class="repair-content">21</view>
+    </view>
+  </view>
+  <view class="repair-btm"> 
+      <button type="primary">同意</button>
+      <button class="warn-turn"  bindtap="openConfirm">驳回</button>
+  </view>
+  <mp-dialog title="请输入理由" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+    <view class="weui-cell__bd">
+      <textarea class="weui-textarea" placeholder="请输入内容" style="height: 4.3em" />
+    </view>
+    </mp-dialog>
+</view>

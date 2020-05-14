@@ -1,0 +1,10 @@
+/* pages/Repair list.wxss */
+.containers{
+  background-color: #fff;
+  padding:0!important;
+  box-sizing: border-box;
+  font-size: small !important;
+}
+.cells{
+  font-size: small !important;
+}

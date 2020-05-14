@@ -1,0 +1,74 @@
+<!--index.wxml-->
+<view class="container">
+
+  <!-- 用户 openid -->
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+      size="default"
+    ></button>
+    <view class="userinfo-nickname-wrapper">
+    {{nickName}}
+    </view>
+  </view>
+
+  <!-- 修改 个人信息 -->
+  <view class='userinfo-modify'  wx:if="{{!modify}}">
+    <view class="userinfo-modify-list"  bindtap="modifySwitch">
+      <view>
+        <mp-icon class="list-icon" icon="contacts" color="gray" size="{{25}}"></mp-icon>
+          修改个人信息
+      </view>
+      <mp-icon icon="arrow" color="gray" size="{{12}}"></mp-icon>
+    </view>
+
+    <view class="userinfo-modify-list">
+      <view>
+        <mp-icon class="list-icon" icon="pencil" color="gray" size="{{25}}"></mp-icon>
+        帮助信息
+      </view>
+      <mp-icon icon="arrow" color="gray" size="{{12}}"></mp-icon>
+    </view>
+
+    <view class="userinfo-modify-list">
+      <view>
+        <mp-icon class="list-icon" icon="setting" color="gray" size="{{25}}"></mp-icon>
+        版本信息
+      </view>
+      <mp-icon icon="arrow" color="gray" size="{{12}}"></mp-icon>
+    </view>
+  </view>
+
+  <!-- 个人信息 修改页 -->
+  <view class='userinfo-modify' wx:if="{{modify}}">
+    <view class="input-item">
+      <view class="input-title">昵称</view>
+      <input auto-focus placeholder="请输入昵称"/>
+    </view>
+
+    <view class="input-item input-radio">
+      <view class="input-title">身份</view>
+      <radio-group bindchange="radioChange">
+        <label wx:for="{{items}}" wx:key="{{item.value}}">
+          <view>
+            <radio value="{{item.value}}" checked="true"/>
+            <span class="radio-name">{{item.name}}</span>
+          </view>
+        </label>
+      </radio-group>
+    </view>
+
+    <view class="input-item">
+      <view class="input-title">邮箱</view>
+      <input auto-focus placeholder="请输入邮箱"/>
+    </view>
+  </view>
+</view>
+
+<view class="button-btm" wx:if="{{modify}}">
+  <button class="cancel-button" bindtap="modifyCancel">取消</button>
+  <button class="weui-btn" type="primary">确认</button>
+</view>

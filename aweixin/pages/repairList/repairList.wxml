@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="containers">
+  <!-- 用户 个人信息 -->
+  <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+    <mp-cells class="cells">
+      <mp-cell link prop="date" title="报修区域：" ext-class="">
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view class="weui-input">
+        {{multiArray[0][multiIndex[0]]}}{{multiArray[1][multiIndex[1]]}}
+        </view>
+    </picker>
+      </mp-cell>
+
+      <mp-cell prop="roomNumber" title="房间号：" ext-class="">
+          <input bindinput="formRoomChange" value="{{roomNumber}}" data-modal="roomNumber" data-field="roomNumber" class="weui-input" placeholder="请输入房间号"/>
+      </mp-cell>
+
+       <mp-cell link prop="date" title="报修项目:" ext-class="">
+          <picker data-field="date" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+              <view class="weui-input">{{date}}</view>
+          </picker>
+      </mp-cell>
+
+      <mp-cell prop="mobile" title="报修详情：" ext-class="">
+          <input bindinput="formInputChange" data-field="mobile" class="weui-input" placeholder="报修详情"/>
+      </mp-cell>
+     
+     <mp-cell prop="mobile" title="报修人：" ext-class="">
+          <input bindinput="formInputChange" data-field="mobile" class="weui-input" placeholder="请输入报修人"/>
+      </mp-cell>
+
+       <mp-cell prop="mobile" title="联系方式：" ext-class="">
+          <input bindinput="formInputChange" data-field="mobile" class="weui-input" placeholder="请输入联系方式"/>
+      </mp-cell>
+      
+    </mp-cells>
+   </mp-form>
+     
+</view>
+<view class="weui-btn-area">
+    <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+</view>
+
