@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/choose/choose.js",
     "pages/index/index",
     "pages/repairList/repairList",
     "pages/listDetail/listDetail",
@@ -16,19 +17,19 @@
     "list": [
       {
         "pagePath": "pages/intelligent/intelligent",
-        "iconPath": "images/list_off.png",      
+        "iconPath": "images/list_off.png",
         "selectedIconPath": "images/list_on.png",
         "text": "智能报修"
       },
       {
         "pagePath": "pages/repairList/repairList",
-        "iconPath": "images/list_off.png",      
+        "iconPath": "images/list_off.png",
         "selectedIconPath": "images/list_on.png",
         "text": "报修列表"
       },
       {
         "pagePath": "pages/index/index",
-        "iconPath": "images/center_off.png",      
+        "iconPath": "images/center_off.png",
         "selectedIconPath": "images/center_on.png",
         "text": "个人中心"
       }

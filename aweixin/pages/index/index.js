@@ -1,5 +1,6 @@
 //index.js
 const app = getApp()
+var http = require('../../utils/http.js');
 
 Page({
   data: {
@@ -24,10 +25,30 @@ Page({
       })
       return
     }
-
+    http.getReq(`repair?content=123&username=13111669067`, function (res) {
+      if (res.status == '0') {
+        $Toast({
+          content: '登录成功'
+        });
+        var isAdmin = false//是否是管理员
+        if (res.sysPos){
+         
+          for (var i = 0; i < res.sysPos.length; i++) {
+            if (res.sysPos[i].posCode == 'sys-1001') {
+              isAdmin = true
+            }
+          }
+        }
+        // wx.switchTab({
+        //   url: '/pages/index/index'
+        // })    
+       
+      } 
+    })
     // 获取用户信息
     wx.getSetting({
       success: res => {
+        console.log(res)
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
